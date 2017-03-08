@@ -47,6 +47,7 @@
 	width: 60%;
 }
 .CheckInput button{
+	cursor: pointer;
 	height: 2.4rem;
     background: #009b63;
     width: 30%;

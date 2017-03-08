@@ -7,21 +7,63 @@
 <meta name="format-detection" content="telephone=no">
 <title>笔记社区首页</title>
 <link rel="stylesheet" href="css/reset.css"/>
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font.css" />
 <link rel="stylesheet" href="css/common.css" />
 <link rel="stylesheet" href="css/Homepage.css" />
 </head>
 <body>
 <div class="wrapper">
-	<div class="header"></div>
+	<div class="header">
+		<nav class="navbar navbar-default" role="navigation">
+		    <div class="container-fluid">
+		    <div class="navbar-header">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+		            <span class="sr-only">切换导航</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="#">
+		        	<img src="images/logo.jpg" class="logo-img" title="logo"/>
+		        </a>
+		        <input type="text" name="" class="form-control search-input">
+		    </div>
+		    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+		        <ul class="nav navbar-nav">
+		            <li class="active"><a href="#">iOS</a></li>
+		            <li><a href="#">SVN</a></li>
+		            <li class="dropdown">
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java<b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                    <li><a href="#">jmeter</a></li>
+		                    <li><a href="#">EJB</a></li>
+		                    <li><a href="#">Jasper Report</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#">分离的链接</a></li>
+		                    <li class="divider"></li>
+		                    <li><a href="#">另一个分离的链接</a></li>
+		                </ul>
+		            </li>
+		        </ul>
+		    </div>
+		    </div>
+		</nav>	
+	</div>
 	<div class="content">
 		<div class="banner"></div>
 		<div class="banner-nav"></div>
 	</div>
-	<div class="footer"></div>
+	<div class="footer">
+		<ul>
+			<li>首页</li>
+			<!-- <li>发布</li> -->
+			<li>我的</li>
+		</ul>
+	</div>
 </div>
 </body>
-<script type="text/javascript" src="js/Libs/jquery.min.js" ></script>
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/Libs/jquery.json.js" ></script>
 </html>
