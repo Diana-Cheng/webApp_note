@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=5.0" charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>发布笔记</title>
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/iconfont.css" />
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/Homepage.css" />
+</head>
+<body>
+<div class="wrapper">
+<div class="wrapper_box">
+	<section class="choose_tips" id="choose_tip_1">
+		<div class="header">
+			<a href="index.html" class="floatL"><</a>
+			<p class="floatL title">类型选择</p>
+		</div>
+		<div class="content">
+			<div class="choose_style">
+				<div class="choose_life btn-success" data-id="">生活随笔</div>
+				<div class="choose_skill btn" data-id="">专业技能</div>
+			</div>
+			<div class="choose_lists_box">
+				<ul class="choose_lists" id="life_list">
+					<li class="active">女生</li>
+					<li>男生</li>
+					<li>其他</li>
+				</ul>
+				<ul class="choose_lists" id="skill_list" style="display: none">
+					<li class="active">前端语言</li>
+					<li>后端语言</li>
+					<li>服务器</li>
+					<li>数据库</li>
+					<li>软件</li>
+					<li>办公</li>
+				</ul>
+				<div class="choose_share">
+					<span>是否公开</span>
+					<i></i>
+				</div>
+			</div>
+			<div class="next_publish">
+				<p type="button" class="btn btn-success" id="next_to_pub">下一步<p>
+			</div>
+		</div>
+	</section>
+	<section class="choose_tips" id="choose_tip_2">
+		<div class="header">
+			<a href="javascript:;" class="floatL" id="prev_choose"><</a>
+			<p class="floatL title">编辑笔记</p>
+		</div>
+		<div class="content">
+		</div>
+	</section>
+</div>
+</div>
+<script type="text/javascript" src="js/Libs/jquery.min.js" ></script>
+<script type="text/javascript">
+	$('#next_to_pub').click(function(){
+		$(".wrapper_box").animate({left:"-100%"});
+	});
+	$('#prev_choose').click(function(){
+		$(".wrapper_box").animate({left:"0"});
+	});
+	function tab(elem,removeElem){
+		$(elem).removeClass('btn-success');
+		$(removeElem).removeClass('btn-success');
+		$(elem).addClass('btn-success');
+	}
+	function show(showElem,elem){
+		$(showElem).css('display','block');
+		$(elem).css('display','none');
+	}
+	$('.choose_life').click(function(){
+		tab($(this),$('.choose_skill'));
+		show($('#life_list'),$('#skill_list'));
+	});
+	$('.choose_skill').click(function(){
+		tab($(this),$('.choose_life'));
+		show($('#skill_list'),$('#life_list'));
+	});
+</script>
+</body>
+</html>
