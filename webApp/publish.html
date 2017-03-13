@@ -17,7 +17,7 @@
 <div class="wrapper_box">
 	<section class="choose_tips" id="choose_tip_1">
 		<div class="header">
-			<a href="index.html" class="floatL"><</a>
+			<a href="index.html" class="floatL"><i class="icon iconfont icon-jiantouzuo"></i></a>
 			<p class="floatL title">类型选择</p>
 		</div>
 		<div class="content">
@@ -27,20 +27,20 @@
 			</div>
 			<div class="choose_lists_box">
 				<ul class="choose_lists" id="life_list">
-					<li class="active">女生</li>
-					<li>男生</li>
-					<li>其他</li>
+					<li class="active"><i class="active icon iconfont icon-sanjiaoxing-dagou"></i>女生</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>男生</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>其他</li>
 				</ul>
 				<ul class="choose_lists" id="skill_list" style="display: none">
-					<li class="active">前端语言</li>
-					<li>后端语言</li>
-					<li>服务器</li>
-					<li>数据库</li>
-					<li>软件</li>
-					<li>办公</li>
+					<li class="active"><i class="active icon iconfont icon-sanjiaoxing-dagou"></i>前端语言</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>后端语言</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>服务器</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>数据库</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>软件</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>办公</li>
 				</ul>
 				<div class="choose_share">
-					<span>是否公开</span>
+					<span>是否公开<i class="icon iconfont icon-kaiguan"></i></span>
 					<i></i>
 				</div>
 			</div>
@@ -51,10 +51,18 @@
 	</section>
 	<section class="choose_tips" id="choose_tip_2">
 		<div class="header">
-			<a href="javascript:;" class="floatL" id="prev_choose"><</a>
+			<a href="javascript:;" class="floatL" id="prev_choose"><i class="icon iconfont icon-jiantouzuo"></i></a>
 			<p class="floatL title">编辑笔记</p>
+			<a class="floatR" id="pub_img"><i class="icon iconfont icon-plus1161952easyiconnet"></i></a>
 		</div>
 		<div class="content">
+			<div class="article_title">
+				<input type="text" name="article_name" placeholder="点击输入标题" />
+			</div>
+			<div class="article_text">
+				<textarea class="article_cont" name="article_cont"></textarea>
+			</div>
+			<div class="article_OK">确定</div>
 		</div>
 	</section>
 </div>
@@ -83,6 +91,12 @@
 	$('.choose_skill').click(function(){
 		tab($(this),$('.choose_life'));
 		show($('#skill_list'),$('#life_list'));
+	});
+	$('.choose_lists li').click(function(){
+		$(this).siblings().removeClass('active');
+		$(this).siblings().find('i').removeClass('active')
+		$(this).addClass('active');
+		$(this).find('i').addClass('active');
 	});
 </script>
 </body>
