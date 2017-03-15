@@ -22,7 +22,7 @@
 		</div>
 		<div class="content">
 			<div class="choose_style">
-				<div class="choose_life btn-success" data-id="">生活随笔</div>
+				<div class="choose_life btn btn-item" data-id="">生活随笔</div>
 				<div class="choose_skill btn" data-id="">专业技能</div>
 			</div>
 			<div class="choose_lists_box">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="next_publish">
-				<p type="button" class="btn btn-success" id="next_to_pub">下一步<p>
+				<p type="button" class="btn btn-item" id="next_to_pub">下一步<p>
 			</div>
 		</div>
 	</section>
@@ -67,7 +67,7 @@
 	</section>
 </div>
 </div>
-<script type="text/javascript" src="js/Libs/jquery.min.js" ></script>
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$('#next_to_pub').click(function(){
 		$(".wrapper_box").animate({left:"-100%"});
@@ -76,9 +76,9 @@
 		$(".wrapper_box").animate({left:"0"});
 	});
 	function tab(elem,removeElem){
-		$(elem).removeClass('btn-success');
-		$(removeElem).removeClass('btn-success');
-		$(elem).addClass('btn-success');
+		$(elem).removeClass('btn-item');
+		$(removeElem).removeClass('btn-item');
+		$(elem).addClass('btn-item');
 	}
 	function show(showElem,elem){
 		$(showElem).css('display','block');

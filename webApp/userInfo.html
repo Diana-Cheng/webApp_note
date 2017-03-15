@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=5.0" charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/Homepage.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="Info_head">
+		<a href="javascript:;" id="login_out" data-msg="确认退出吗？"><i class="icon iconfont icon-tuichu"></i></a>
+		<div class="userImg">
+			<img src="images/logo.jpg" alt="图片加载失败">
+			<p>diana_cxh<i class="icon iconfont icon-edit"></i></p>
+		</div>
+	</div>
+	<ul class="user_nav">
+		<li class="active" data-id="info_center">个人中心</li>
+		<li data-id="history">浏览记录</li>
+	</ul>
+	<div class="choose_box">
+		<div class="info_center" id="info_center">
+			<div class="choose_bar">
+				<i class="icon iconfont icon-book"></i>
+				<span>我的笔记</span>
+				<i class="icon iconfont icon-xiangyoujiantou"></i>
+			</div>
+			<div class="choose_bar">
+				<i class="icon iconfont icon-tuijianicon"></i>
+				<span>我的收藏</span>
+				<i class="icon iconfont icon-xiangyoujiantou"></i>
+			</div>
+			<div class="choose_bar">
+				<i class="icon iconfont icon-shoucang"></i>
+				<span>我的收藏</span>
+				<i class="icon iconfont icon-xiangyoujiantou"></i>
+			</div>
+			<div class="choose_bar">
+				<i class="icon iconfont icon-guanzhu"></i>
+				<span>我的收藏</span>
+				<i class="icon iconfont icon-xiangyoujiantou"></i>
+			</div>
+			<div class="choose_bar">
+				<i class="icon iconfont icon-guanzhu icon-guanzhu_1"></i>
+				<span>我的收藏</span>
+				<i class="icon iconfont icon-xiangyoujiantou"></i>
+			</div>
+			<div class="link_box">
+				<div class="choose_bar">
+					<i class="icon iconfont icon-book"></i>
+					<span>问卷调查（参与有奖）</span>
+					<i class="icon iconfont icon-xiangyoujiantou"></i>
+				</div>
+				<div class="choose_bar">
+					<i class="icon iconfont icon-book"></i>
+					<span>问题反馈</span>
+					<i class="icon iconfont icon-xiangyoujiantou"></i>
+				</div>
+				<div class="choose_bar">
+					<i class="icon iconfont icon-book"></i>
+					<span>版本信息</span>
+					<i class="icon iconfont icon-xiangyoujiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="history" id="history" style="display: none;">
+			<ul>
+				<li><a href="javascript:;">今日头条爆炸</a><span>3分钟前</span></li>
+				<li><a href="javascript:;">今日头条爆炸</a><span>3分钟前</span></li>
+				<li><a href="javascript:;">今日头条爆炸</a><span>3分钟前</span></li>
+				<li><a href="javascript:;">今日头条爆炸</a><span>3分钟前</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<ul>
+			<li><a href="index.html"><i class="iconfont icon-fangzi"></i><span>首页</span></a></li>
+			<li><a href="javascript:;"><i class="iconfont icon-9"></i><span>设置</span></a>a></li>
+			<li><a href="login.html"><i class="iconfont icon-gerenzhongxin"></i><span>我的</span></a></li>
+		</ul>
+	</div>
+</div>
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript">
+	$('.user_nav li').click(function(){
+		var id = $(this).attr('data-id');
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+		$('.choose_box > div').css('display','none');
+		$('#'+id).css('display','block');
+	});
+	$('#login_out').click(function(){
+		notice(this);
+	});
+	$("body").on("click", ".notice_box .default", function() {
+    	$('.notice_box').remove();
+	});
+</script>
+</body>
+</html>

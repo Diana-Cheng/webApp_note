@@ -126,3 +126,16 @@ function validateCode()
     $(".errorShow").hide()
     return true;      
 }   
+// 提示框
+function notice(elem){
+	var msg = $(elem).attr('data-msg');
+	var str = '<div class="notice_box">'
+			+ '<div class="info_box">'
+			+ '<div class="info_header">提示</div>'
+			+ '<div class="info_content">'+msg+'</div>'
+			+ '<div class="info_footer">'
+			+ '<button class="default">取消</button>'
+			+ '<button class="sure">确认</button>'
+			+ '</div></div></div>';
+	$('body').append(str);
+}
