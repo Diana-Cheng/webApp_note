@@ -24,7 +24,7 @@ html,.header,.footer{position: relative;max-width: 1024px;}
 .nav li{color: white;}
 /*内容*/.main{overflow: hidden;}
 .search-input{height: 2.6rem;width: 70%;display: inline-block;background-color: #fff;border-radius:0.3rem;float: right;position: relative;top:50%;-moz-transform:translateY(-50%);-o-transform:translateY(-50%);transform: translateY(-50%);overflow: hidden;}
-.search-input input{display: inline-block;padding-left:0.5rem;width: 93%;height: 100%;border: none;background: none;}
+.search-input input{display: inline-block;padding-left:0.5rem;width: 91%;height: 100%;border: none;background: none;}
 .search-input i{color:#aaa;position: relative;}
 .user-img{border: 1px solid #398dee;margin:0 10px;}
 .content-list{margin:5px 0;background-color: #fff;padding: 10px;}
@@ -33,6 +33,12 @@ html,.header,.footer{position: relative;max-width: 1024px;}
 .list-cont-title{font-size: 1.7rem;font-weight: 600;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .list-cont-content{height: 5.1rem;line-height: 1.7rem;text-overflow:ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;}
 .content-list-footer p{display: inline-block;margin:0;}
+/*-------轮播图片-------*/
+#myCarousel{width: 100%;height: 15rem;overflow: hidden;}
+#myCarousel .carousel-indicators li{background-color: #ddd}
+#myCarousel .carousel-inner,
+#myCarousel .carousel-inner .item{width: 100%;height: 100%;}
+#myCarousel .carousel-inner img{width: 100%;height: 100%;}
 /*-------尾部导航-------*/.footer{position: fixed;bottom: 0;left: 0;z-index: 999;height: 4.5rem;background: #ddd;width: 100%;padding: 6px 0;}
 .footer ul{height: 100%;overflow: hidden;}
 .footer li{display: inline-block;float: left;height: 100%;width: 33.3%;text-align: center;}
@@ -42,7 +48,7 @@ html,.header,.footer{position: relative;max-width: 1024px;}
 /*按钮*/.BtnCont{margin:0.3rem 1rem;overflow: hidden;}
 .BigBtn{padding: 0.7rem 0;background: #3498db;border: none;border-radius: 5px;color: #fff;font-size: 0.92rem;text-align: center;margin:0.8rem 0 0;display: block;width: 100%;}
 .BigBtnTwo{background: #f19625;}
-/*弹框*/.modal{position: fixed;width: 100%;height: 100%;visibility: hidden;top: 0;left: 0;z-index: 990;opacity: 0;background: rgba(109,127,144,0.4);-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;}
+/*弹框*/.modal{position: fixed;width: 100%;height: 100%;top: 0;left: 0;opacity: 0;background: rgba(109,127,144,0.4);-webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;}
 .MetalInfo{padding: 1.2rem 0.5rem 1.2rem;}
 .medalCont{width:280px;min-height: 160px;background: #fff;margin: -110px 0 0 -140px;position: fixed;top:50%;left:50%;z-index: 991;-webkit-transform: translateY(-40px);-moz-transform: translateY(-40px);-ms-transform: translateY(-40px);-o-transform: translateY(-40px);transform: translateY(-40px);-webkit-backface-visibility: hidden;-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property: transform;-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s;}
 .medalContCurr{opacity: 1;visibility: visible;-webkit-transition: opacity 0.3s 0s, visibility 0s 0s;-moz-transition: opacity 0.3s 0s, visibility 0s 0s;transition: opacity 0.3s 0s, visibility 0s 0s;}

@@ -9,22 +9,32 @@ $(function(){
 		$('#groupForm').css('display','block');
 		$('#signForm').css('display','none');
 		$('#forgetForm').css('display','none');
-		$('header h3').text('登录');
+		$('header .title').text('登录');
 		CountSize();
 	});
 	$('.Sign').click(function(){
 		$('#groupForm').css('display','none');
 		$('#signForm').css('display','block');
 		$('#forgetForm').css('display','none');
-		$('header h3').text('注册');
+		$('header .title').text('注册');
 		CountSize();
 	});
 	$('.forgetAcc').click(function(){
 		$('#groupForm').css('display','none');
 		$('#signForm').css('display','none');
 		$('#forgetForm').css('display','block');
-		$('header h3').text('找回密码');
+		$('header .title').text('找回密码');
 		CountSize();
+	});
+	
+	$('i.checkbox').click(function(){
+		if($(this).hasClass('icon-gongsisvgtubiaozongji22')){
+			$(this).removeClass('icon-gongsisvgtubiaozongji22');
+			$(this).addClass('icon-dagou');
+		}else if($(this).hasClass('icon-dagou')){
+			$(this).removeClass('icon-dagou');
+			$(this).addClass('icon-gongsisvgtubiaozongji22');
+		}
 	});
 
 	var pwdAnswer="";

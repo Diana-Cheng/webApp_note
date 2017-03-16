@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=5.0" charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>搜索</title>
+<link rel="stylesheet" href="css/Libs/reset.css"/>
+<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/Libs/iconfont.css" />
+<link rel="stylesheet" href="css/Libs/common.css" />
+<link rel="stylesheet" href="css/Homepage.css" />
+</head>
+<body>
+<div class="wrapper">
+<div class="wrapper_box">
+	<section class="choose_tips" id="choose_tip_1">
+		<div class="header">
+			<a href="index.html" class="floatL"><i class="icon iconfont icon-jiantouzuo"></i></a>
+			 <div class="search-input search-type">
+			    <input type="text" name="search_zi" id="search_zi"><i class="iconfont icon-sousuo_sousuo"></i>
+			</div>
+		</div>
+		<div class="content">
+			<div class="choose_lists_box">
+				<ul class="choose_lists" id="life_list">
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>女生</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>男生</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>其他</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>前端语言</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>后端语言</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>服务器</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>数据库</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>软件</li>
+					<li><i class="icon iconfont icon-sanjiaoxing-dagou"></i>办公</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
+<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('#next_to_pub').click(function(){
+		$(".wrapper_box").animate({left:"-100%"});
+	});
+	$('#prev_choose').click(function(){
+		$(".wrapper_box").animate({left:"0"});
+	});
+	function tab(elem,removeElem){
+		$(elem).removeClass('btn-item');
+		$(removeElem).removeClass('btn-item');
+		$(elem).addClass('btn-item');
+	}
+	function show(showElem,elem){
+		$(showElem).css('display','block');
+		$(elem).css('display','none');
+	}
+	$('.choose_life').click(function(){
+		tab($(this),$('.choose_skill'));
+		show($('#life_list'),$('#skill_list'));
+	});
+	$('.choose_skill').click(function(){
+		tab($(this),$('.choose_life'));
+		show($('#skill_list'),$('#life_list'));
+	});
+	$('.choose_lists li').click(function(){
+		$(this).siblings().removeClass('active');
+		$(this).siblings().find('i').removeClass('active')
+		$(this).addClass('active');
+		$(this).find('i').addClass('active');
+	});
+	$('.choose_share i').click(function(){
+		if($(this).hasClass('icon-kaiguan')){
+			$(this).removeClass('icon-kaiguan').addClass('icon-kaiguan1');
+		}else if($(this).hasClass('icon-kaiguan1')){
+			$(this).removeClass('icon-kaiguan1').addClass('icon-kaiguan');
+		}
+	})
+</script>
+</body>
+</html>

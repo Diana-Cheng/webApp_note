@@ -5,54 +5,18 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<title>笔记社区首页</title>
+<title>笔记列表</title>
 <link rel="stylesheet" href="css/Libs/reset.css"/>
 <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/Libs/iconfont.css" />
 <link rel="stylesheet" href="css/Libs/common.css" />
 </head>
 <body>
-<div class="wrapper">
-	<div class="header">
-		<nav class="navbar navbar-default" role="navigation">
-		    <div class="container-fluid">
-			    <div class="navbar-header">
-			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-			            <span class="sr-only">切换导航</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			        </button>
-			        <a class="navbar-brand" href="userInfo.html">
-			        	<img src="images/logo.jpg" class="logo-img" title="logo"/>
-			        </a>
-			        <div class="search-input">
-			        	<a href="search.html" class="search"><input type="text" name="" readonly><i class="iconfont icon-sousuo_sousuo"></i></a>
-			        </div>
-			    </div>
-			    <div class="collapse navbar-collapse" id="example-navbar-collapse">
-			        <ul class="nav navbar-nav">
-			            <li><a href="index.html"><i class="iconfont icon-tuijianicon"></i>精品笔记</a></li>
-			            <li><a href="index.html"><i class="iconfont icon-zuire"></i>最热笔记</a></li>
-			            <li><a href="index.html"><i class="iconfont icon-tubiao103"></i>最新笔记</a></li>
-			        </ul>
-			    </div>
-		    </div>
-		</nav>	
-	</div>
-	<div class="content">
-		<div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
-             <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>   
-            <div class="carousel-inner bor_btm">
-                <div class="item active"><a href="#"><img src="images/web.jpg" alt="web"></a></div>
-                <div class="item"><a href="#"><img src="images/css.jpg" alt="web"></a></div>
-                <div class="item"><a href="#"><img src="images/framework.jpg" alt="web"></a></div>
-            </div>
-        </div>
+	<div class="wrapper">
+		<div class="header noteList">
+			<a href="index.html" class="floatL"><i class="icon iconfont icon-jiantouzuo"></i></a>
+			<p class="floatL title">笔记列表</p>
+		</div>
 		<div class="content-lists">
 			<div class="content-list">
 				<div class="content-list-title">
@@ -68,6 +32,7 @@
 					<p><span>4</span>评论</p>
 					<p><span>23</span>点赞</p>
 					<p><span>0</span>收藏</p>
+					<p>2017-03-16</p>
 				</div>
 			</div>
 			<div class="content-list">
@@ -84,6 +49,7 @@
 					<p><span>4</span>评论</p>
 					<p><span>23</span>点赞</p>
 					<p><span>0</span>收藏</p>
+					<p>2017-03-16</p>
 				</div>
 			</div>
 			<div class="content-list">
@@ -100,6 +66,7 @@
 					<p><span>4</span>评论</p>
 					<p><span>23</span>点赞</p>
 					<p><span>0</span>收藏</p>
+					<p>2017-03-16</p>
 				</div>
 			</div>
 			<div class="content-list">
@@ -116,37 +83,10 @@
 					<p><span>4</span>评论</p>
 					<p><span>23</span>点赞</p>
 					<p><span>0</span>收藏</p>
+					<p>2017-03-16</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<ul>
-			<li><a href="index.html"><i class="iconfont icon-fangzi"></i><span>首页</span></a></li>
-			<li><a href="javascript:;"><i class="iconfont icon-9"></i><span>设置</span></a>a></li>
-			<li><a href="login.html"><i class="iconfont icon-gerenzhongxin"></i><span>我的</span></a></li>
-			<!-- <li><a href="login.html"><i class="iconfont icon-gerenzhongxin"></i><span>消息中心</span></a></li> -->
-		</ul>
-	</div>
-	<div class="aside">
-		<a href="publish.html"><i class="iconfont icon-iconfontxinzeng"></i></a>
-	</div>
-</div>
 </body>
-<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/Libs/jquery.json.js" ></script>
-<script type="text/javascript" src="js/jgestures.min.js"></script>
-<script type="text/javascript">	
-	$(document).ready(function(){
-	    //手势右滑 回到上一个画面
-	    $('#myCarousel').bind('swiperight swiperightup swiperightdown',function(){
-	        $("#myCarousel").carousel('prev');
-	    })
-	    //手势左滑 进入下一个画面
-	    $('#myCarousel').bind('swipeleft swipeleftup swipeleftdown',function(){
-	        $("#myCarousel").carousel('next');
-	    })
-	})
-</script>
 </html>
