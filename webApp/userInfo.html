@@ -42,12 +42,12 @@
 				<span>我的点赞</span>
 				<i class="icon iconfont icon-xiangyoujiantou"></i>
 			</div>
-			<div class="choose_bar" data-type="myGuangzhu">
+			<div class="choose_bar" data-guanzhu="myGuangzhu">
 				<i class="icon iconfont icon-guanzhu"></i>
 				<span>我的关注</span>
 				<i class="icon iconfont icon-xiangyoujiantou"></i>
 			</div>
-			<div class="choose_bar" data-type="guangzhuMe">
+			<div class="choose_bar" data-guanzhu="guangzhuMe">
 				<i class="icon iconfont icon-guanzhu icon-guanzhu_1"></i>
 				<span>关注我的</span>
 				<i class="icon iconfont icon-xiangyoujiantou"></i>
@@ -90,25 +90,38 @@
 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/common.js" ></script>
 <script type="text/javascript">
+
 	$('.user_nav li').click(function(){
+
 		var id = $(this).attr('data-id');
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
 		$('.choose_box > div').css('display','none');
 		$('#'+id).css('display','block');
+
 	});
+
 	$('#login_out').click(function(){
 		notice(this);
 	});
+
 	$("body").on("click", ".notice_box .default", function() {
     	$('.notice_box').remove();
 	});
+
 	$('.choose_bar').click(function(){
+
 		var type = $(this).attr('data-type');
+		var guanzhu = $(this).attr('data-guanzhu');
+
 		if(type != undefined && type != null && type != ''){
-			console.log(type);
 			window.location.href = 'noteLists.html' ;
 		}
+
+		if(guanzhu != undefined && guanzhu != null && guanzhu != ''){
+			window.location.href = 'userLists.html' ;
+		}
+
 	})
 </script>
 </body>

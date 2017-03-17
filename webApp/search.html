@@ -42,41 +42,52 @@
 </div>
 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
+
 	$('#next_to_pub').click(function(){
 		$(".wrapper_box").animate({left:"-100%"});
 	});
+
 	$('#prev_choose').click(function(){
 		$(".wrapper_box").animate({left:"0"});
 	});
+
 	function tab(elem,removeElem){
 		$(elem).removeClass('btn-item');
 		$(removeElem).removeClass('btn-item');
 		$(elem).addClass('btn-item');
 	}
+
 	function show(showElem,elem){
 		$(showElem).css('display','block');
 		$(elem).css('display','none');
 	}
+
 	$('.choose_life').click(function(){
 		tab($(this),$('.choose_skill'));
 		show($('#life_list'),$('#skill_list'));
 	});
+
 	$('.choose_skill').click(function(){
 		tab($(this),$('.choose_life'));
 		show($('#skill_list'),$('#life_list'));
 	});
+
 	$('.choose_lists li').click(function(){
 		$(this).siblings().removeClass('active');
 		$(this).siblings().find('i').removeClass('active')
 		$(this).addClass('active');
 		$(this).find('i').addClass('active');
 	});
+
 	$('.choose_share i').click(function(){
+
 		if($(this).hasClass('icon-kaiguan')){
 			$(this).removeClass('icon-kaiguan').addClass('icon-kaiguan1');
-		}else if($(this).hasClass('icon-kaiguan1')){
+		}
+		else if($(this).hasClass('icon-kaiguan1')){
 			$(this).removeClass('icon-kaiguan1').addClass('icon-kaiguan');
 		}
+
 	})
 </script>
 </body>

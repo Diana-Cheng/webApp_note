@@ -7,6 +7,7 @@ html,.header,.footer{position: relative;max-width: 1024px;}
 .header a{display: block;line-height:3.4rem;font-size:1rem;position: relative;padding:0 0.8rem;z-index: 99;}
 .header a i{color: #fff}
 .header a.search i{color: #aaa}
+.header.noteList p{color:#fff;position: absolute;top:50%;right:50%;transform: translate(50%,-50%);-webkit-transform: translate(50%,-50%);-moz-transform: translate(50%,-50%);-o-transform: translate(50%,-50%);-ms-transform: translate(50%,-50%);}
 .Logo{position: absolute;width: 100%;text-align: center;z-index: 98;height: 100%;line-height: 3.4rem;font-size: 1.07rem;color: #333;}
 .Logo span{height: 100%;display: inline-block;vertical-align: middle;}
 .Logo img{width:40%;height: auto;vertical-align: middle;}
@@ -68,6 +69,17 @@ html,.header,.footer{position: relative;max-width: 1024px;}
 .notice_box .info_box .info_footer{height: 3rem;}
 .notice_box .info_box .info_footer .default{height: 100%;width:50%;border:none;float: left}
 .notice_box .info_box .info_footer .sure{height: 100%;width: 50%;color: #fff;background-color: #3498db;border:none;float: left}
+/*用户列表*/
+.user-list{overflow:hidden;padding:1rem;background-color: #fff;margin-bottom: 0.3rem;}
+.user-list div{float: left;height:6rem;}
+.user-list .userPic,.user-list .userInfo,.user-list .doBox{padding: 1rem 0;}
+.user-list .userPic img{width: 4rem;height: 4rem;}
+.user-list .userInfo{overflow: hidden;width:60%;}
+.user-list .userInfo span{width:90%;overflow:hidden;display: block;white-space: nowrap;text-overflow: ellipsis;}
+.user-list .userInfo .userName{font-size: 1.6rem;font-weight:600;}
+.user-list .doBox a{display:block;margin:0 auto;text-align: center;}
+.user-list .doBox i{font-size:2rem;}
+.user-list .doBox  p{font-size: 1rem;}
 @media (min-width: 700px){
 	.header{height: 56px;}
 	.search-input{width: 200px;}

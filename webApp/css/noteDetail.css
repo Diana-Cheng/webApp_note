@@ -1,0 +1,57 @@
+.userBox{
+	width: 100%;
+    height: 12rem;
+    background: url(../images/background.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}  
+.userBox_in{
+	width: 100%;
+	height: 100%;
+	position: relative;
+    z-index: 0;
+    padding-top: 1rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+} 
+.userBox img{
+	display: inline-block;
+	height: 60%;
+	border-radius: 50%;
+}
+.userBox p{
+	color:#fff;
+}
+.userBox p i{
+	margin-left: 1rem;
+	font-size: 2rem;
+	color:#5cb85c;
+	/*background-color: #fff;*/
+}
+.doBox{
+	position: fixed;
+	right:1rem;
+	bottom:1rem;
+}
+.doBox a{
+	display: block;
+	margin-bottom: 0.5rem;
+	height:4rem;
+	width: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	border-radius: 50%;
+}
+.doBox a.dianzan{
+	background-color: #f0ad4e;
+}
+.doBox a.edit{
+	background-color: #5cb85c;
+}
+.doBox a.shoucang{
+	background-color: #5bc0de;
+}
+.doBox a i{
+	font-size: 3.5rem;
+	color: #fff;
+}
