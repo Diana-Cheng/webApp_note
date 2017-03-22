@@ -101,7 +101,7 @@ html,body{
 }
 .pinglunLists .pinglun{
 	border-top:1px solid #ccc;
-	padding:1rem 0;
+	padding-top:1rem;
 	overflow: hidden;
 }
 .pinglunLists .pinglun div{
