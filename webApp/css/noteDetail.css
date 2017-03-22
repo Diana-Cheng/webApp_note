@@ -1,9 +1,18 @@
+html,body{
+	height:100%;
+}
+.wrapper{
+	background-color: #fff;
+	padding-top: 12rem;
+}
 .userBox{
 	width: 100%;
     height: 12rem;
     background: url(../images/background.jpg) no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    position: fixed;
+    top:0;
 }  
 .userBox_in{
 	width: 100%;
@@ -14,6 +23,14 @@
     text-align: center;
     background-color: rgba(0,0,0,0.3);
 } 
+.userBox_in a{
+	position: fixed;
+	top:1rem;
+	left:1rem;
+}
+.userBox_in a i{
+	color: #fff;
+}
 .userBox img{
 	display: inline-block;
 	height: 60%;
@@ -26,7 +43,87 @@
 	margin-left: 1rem;
 	font-size: 2rem;
 	color:#5cb85c;
-	/*background-color: #fff;*/
+}
+.articleBox{
+	padding:0 1rem;
+}
+.articleBox .article_title{
+	padding:0.5rem;
+	border-bottom: 1px solid #ccc;
+}
+.articleBox .article_title p{
+	margin:0;
+	line-height:1.6rem;
+	font-size:1.6rem;
+	vertical-align: middle;
+	font-weight: 600;
+}
+.articleBox .article_cont{
+	padding:0.5rem;
+}
+.articleBox .article_cont p{
+	line-height:1.6rem;
+	font-size:1.4rem;
+	text-indent:2rem;
+}
+.noteMsg{
+	padding:1rem;
+}
+.noteMsg .dianzan a{
+	display: inline-block;
+	width: 9rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 1.5rem;
+	background-color: #ccc;
+	color: #666;
+}
+.noteMsg .dianzan a.active{
+	background-color:#f0ad4e;
+	color: white;
+}
+.noteMsg .dianzan a i{
+	display: inline-block;
+	margin-right:0.2rem;
+	color: #fff;
+	font-size: 2rem;
+	vertical-align: middle;
+}
+.noteMsg .dianzan a.active span{
+	color: white;
+}
+.pinglunLists{
+	padding-top:1rem;
+}
+.pinglunLists .title span{
+	padding-left:0.5rem;
+}
+.pinglunLists .pinglun{
+	border-top:1px solid #ccc;
+	padding:1rem 0;
+	overflow: hidden;
+}
+.pinglunLists .pinglun div{
+	float: left;
+}
+.pinglunLists .pinglun div.p_left{
+	width: 15%;
+}
+.pinglunLists .pinglun div.p_right{
+	width: 80%;
+}
+.pinglunLists .pinglun div.p_left img{
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+.pinglunLists .pinglun div.p_right .name{
+	margin-bottom: 3px;
+}
+.pinglunLists .pinglun div.p_right .text{
+	color:#444;
 }
 .doBox{
 	position: fixed;
